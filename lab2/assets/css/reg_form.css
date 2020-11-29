@@ -9,7 +9,7 @@ input,
 select {
     position: relative;
     left: 590px;
-    bottom: 110px;
+    bottom: -110px;
     margin-bottom: 40px;
     border: 0;
     border-bottom: 2px solid darkcyan;
@@ -26,7 +26,7 @@ select {
     color: white;
     background-color: lightseagreen;
     left: 640px;
-    bottom: 90px;
+    bottom: -100px;
     cursor: pointer;
     transition: 0.2s;
 }

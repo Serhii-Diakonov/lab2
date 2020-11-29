@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="assets/css/reg_form.css">
     <link rel="stylesheet" href="assets/css/modal.css">
     <link rel="stylesheet" href="assets/css/personal.css">
+    <link rel="stylesheet" href="assets/css/per_edit.css">
 </head>
 <html>
     <body>
-        <h1>Personal page</h1>
+        <h1>Edit page</h1>
         <?php
         require_once 'connection.php';
         $query="SELECT first_name, last_name, email, photo, role_id, password FROM users
@@ -46,7 +47,7 @@
                 ";
                 echo '</span>';
                 if($user['3']!=NULL)echo "<img src='".$user['3']."' alt='User`s avatar' id='ava'>";
-                else echo "<span id='no_img'>The user have no avatar</span>";
+                else echo "<span id='noimg'>The user have no avatar</span>";
             } else echo "<a href='main.php'><img src='assets/img/error.png' alt='LOGO' id='logo'></a>
             <div id='logo-text'>Butterfly team</div>
             <h2>Error. Cannot load user information</h2>";

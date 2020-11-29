@@ -5,6 +5,8 @@
 }
 
 p {
+    position: relative;
+    bottom: -120px;
     border-bottom: 2px solid darkcyan;
     width: 500px;
     padding: 10px;
@@ -23,14 +25,14 @@ span {
     width: 100px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     position: relative;
-    left: 200px;
-    top: -330px;
+    left: 1130px;
+    top: -200px;
 }
 
 #ava {
     position: absolute;
-    bottom: 120px;
-    left: 240px;
+    bottom: 220px;
+    left: 1140px;
     height: 360px;
     width: 240px;
 }
@@ -82,7 +84,7 @@ h2 {
 
 #file_load {
     position: absolute;
-    left: 150px;
+    left: 250px;
     bottom: 37px;
     border: 0;
 }
@@ -105,14 +107,12 @@ h2 {
     cursor: default;
 }
 
-
-/* 
 #show {
-    left: 350px;
-    bottom: -10px;
+    left: 750px;
+    bottom: -50px;
 }
 
 #edit {
-    bottom: -10px;
-    left: 320px;
-} */
+    bottom: -120px;
+    left: 520px;
+}

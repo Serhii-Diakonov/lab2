@@ -13,6 +13,7 @@
 </head>
 <html>
     <body>
+    <h1>Home page</h1>
         <?php
             if($_SESSION['auth']) echo '<h2 id="prsnl" onclick="send('.$_SESSION['id'].',\'personal.php\')">'.$_SESSION['firstname'].' | <a href="sign_out.php">Sign out</a></h2>';
             else echo "<h2><span id='show'>Sign in</span> | <a href='registration.php'>Sign up</a></h2>";
@@ -53,7 +54,7 @@
                         <td>".$row[8]."</td>
                         ";
                         echo "</tr>";
-                    } else echo "<tr>Impossible to get data from database</tr>";
+                    } 
                 }
             } else echo "<tr>Impossible to get data from database</tr>";
             if($_SESSION['role']=="Admin") echo "<a href='registration.php'><button class='button' id='add_b'>Add user</button></a>";

@@ -1,7 +1,6 @@
 #logo {
-    position: relative;
-    left: 200px;
-    bottom: 60px;
+    position: absolute;
+    top: 10px;
     width: 140px;
     height: 150px;
 }
@@ -14,7 +13,7 @@
 #logo-text {
     font-family: Butterfly, cursive;
     font-size: 28px;
-    position: relative;
-    left: 280px;
-    bottom: 70px;
+    position: absolute;
+    left: 80px;
+    top: 160px;
 }

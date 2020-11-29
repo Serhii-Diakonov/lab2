@@ -1,0 +1,38 @@
+form {
+    position: absolute;
+    left: -535px;
+    top: 20px;
+}
+
+input,
+select {
+    width: 500px;
+}
+
+#show {
+    position: relative;
+    left: 270px;
+    bottom: -550px;
+}
+
+#load {
+    position: relative;
+    left: 570px;
+    bottom: -109px;
+    width: 200px;
+}
+
+#file_load {
+    position: absolute;
+    bottom: -60px;
+    left: 1180px;
+}
+
+#noimg {
+    color: red;
+    width: 100px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: relative;
+    left: 900px;
+    top: 150px;
+}
