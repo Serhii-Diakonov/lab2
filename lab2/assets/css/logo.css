@@ -1,0 +1,20 @@
+#logo {
+    position: relative;
+    left: 200px;
+    bottom: 60px;
+    width: 140px;
+    height: 150px;
+}
+
+@font-face {
+    font-family: Butterfly;
+    src: url(fonts/ButterflyFree.otf);
+}
+
+#logo-text {
+    font-family: Butterfly, cursive;
+    font-size: 28px;
+    position: relative;
+    left: 280px;
+    bottom: 70px;
+}

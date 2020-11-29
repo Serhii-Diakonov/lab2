@@ -1,0 +1,24 @@
+h2 {
+    position: relative;
+    bottom: -60px;
+    text-align: right;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#redir {
+    border: 0;
+    display: none;
+}
+
+.redirect,
+#prsnl,
+#show {
+    cursor: pointer;
+}
+
+#add_b {
+    height: 50px;
+    position: relative;
+    left: 1400px;
+    bottom: -400px;
+}

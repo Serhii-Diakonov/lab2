@@ -1,0 +1,27 @@
+.button {
+    font-family: Arial, Helvetica, sans-serif;
+    border: 0;
+    width: 100px;
+    height: 30px;
+    border-radius: 15px;
+    color: white;
+    background-color: lightseagreen;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.button:hover {
+    background-color: lightskyblue;
+    box-shadow: 0 0 7px lightskyblue;
+    transition: 0.2s;
+}
+
+.button:active {
+    transition: 0.2s;
+    background-color: darkcyan;
+    box-shadow: 0 0 0;
+}
+
+.button:focus {
+    outline: none;
+}

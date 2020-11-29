@@ -1,0 +1,118 @@
+#error {
+    text-align: center;
+    color: red;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p {
+    border-bottom: 2px solid darkcyan;
+    width: 500px;
+    padding: 10px;
+    margin: 40px;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+span {
+    position: relative;
+    left: 500px;
+}
+
+#no_img {
+    color: red;
+    width: 100px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: relative;
+    left: 200px;
+    top: -330px;
+}
+
+#ava {
+    position: absolute;
+    bottom: 120px;
+    left: 240px;
+    height: 360px;
+    width: 240px;
+}
+
+.button {
+    margin-left: 20px;
+    width: 200px;
+}
+
+#yes {
+    width: 80px;
+    position: relative;
+    background-color: crimson;
+    left: -5px;
+    bottom: -60px;
+}
+
+#yes:hover {
+    background-color: red;
+    box-shadow: 0 0 7px red;
+}
+
+#yes:active {
+    background-color: maroon;
+}
+
+#ques {
+    position: relative;
+    bottom: -65px;
+    text-align: center;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1,
+h2 {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#redir {
+    border: 0;
+    display: none;
+}
+
+.hide_text {
+    display: none;
+}
+
+#file_load {
+    position: absolute;
+    left: 150px;
+    bottom: 37px;
+    border: 0;
+}
+
+#load {
+    position: absolute;
+    width: 80px;
+    left: 380px;
+    bottom: 51px;
+}
+
+#load[disabled] {
+    background-color: lightgray;
+    color: grey;
+    cursor: default;
+}
+
+#load[disabled]:hover {
+    box-shadow: none;
+    cursor: default;
+}
+
+
+/* 
+#show {
+    left: 350px;
+    bottom: -10px;
+}
+
+#edit {
+    bottom: -10px;
+    left: 320px;
+} */

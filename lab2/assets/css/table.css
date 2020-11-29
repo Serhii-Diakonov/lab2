@@ -1,0 +1,19 @@
+table {
+    position: relative;
+    left: 350px;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    text-align: center;
+    padding: 20px;
+    border: 2px solid grey;
+    width: 150px;
+}
+
+h1 {
+    position: relative;
+    left: 1200px;
+    bottom: -80px;
+}
