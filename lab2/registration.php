@@ -13,7 +13,7 @@
     <input name="lastname" type="text" placeholder="Last name" required><br>
     <input name="email" type="text" placeholder="Email" required><br>
     <select name="role" required>
-        <option value="2">User</option>
+        <option value="2" selected>User</option>
         <option value="1">Admin</option>
     </select><br>
     <input name="password" type="password" id="psw_1" placeholder="Password" required><br>

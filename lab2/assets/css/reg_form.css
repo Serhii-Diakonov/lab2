@@ -53,7 +53,7 @@ select {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     position: relative;
     left: 590px;
-    bottom: 145px;
+    bottom: -85px;
 }
 
 #button[disabled] {

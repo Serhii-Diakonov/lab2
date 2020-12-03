@@ -9,6 +9,13 @@
     session_start();
     require_once 'connection.php';
 
+    function check_input($data) {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+    }
+
     if($_FILES['img']['name']!=NULL){
     $dir="public/images/";
     $target_file=$dir.basename($_FILES['img']['name']);
@@ -41,11 +48,15 @@
         }
     }
     }
-    $email="'".$_POST['email']."'";
-    $f_name="'".$_POST['firstname']."'";
-    $l_name="'".$_POST['lastname']."'";
-    $psw="'".$_POST['password']."'";
+    $_SESSION['firstname']=check_input($_POST['firstname']);
+    if($_POST['role']==1)$_SESSION['role']="Admin";
+    else $_SESSION['role']="User";
+    $email="'".check_input($_POST['email'])."'";
+    $f_name="'".check_input($_POST['firstname'])."'";
+    $l_name="'".check_input($_POST['lastname'])."'";
+    $psw="'".check_input($_POST['password'])."'";
     $role="'".$_POST['role']."'";
+    // echo $role;
     $query="UPDATE users SET first_name=".$f_name.", last_name=".$l_name.", email=".$email.", password=".$psw.", role_id=".$role."WHERE id=".$_POST['id'];
     $res=mysqli_query($conn, $query);
     if(!$res) echo "<a href='main.php'><img src='assets/img/error.png' alt='LOGO' id='logo'></a>

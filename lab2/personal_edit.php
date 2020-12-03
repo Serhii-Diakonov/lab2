@@ -40,8 +40,10 @@
                 <input type='text' name='password' value='".$user[5]."' required placeholder='Password' id='password'><br>
                 <div id='err1' class='errmsg'></div>
                 <input type='file' id='file_load' name='img' accept='image/*'>
-                <input type='text' class='hide_text' name='id' value='".$_GET['id']."'>
-                <input type='submit' id='load' value='Confirm' class='button'>
+                <input type='text' class='hide_text' name='id' value='".$_GET['id']."'>";
+                if($_SESSION['role']=="User")echo "<input type='submit' id='load' value='Confirm' class='button'>";
+                else echo "<input type='submit' id='load1' value='Confirm' class='button'>";
+                echo "
                 </form>
                 <button class='button' id='show'>Cancel</button>
                 ";

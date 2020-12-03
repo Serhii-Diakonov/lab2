@@ -82,13 +82,6 @@ h2 {
     display: none;
 }
 
-#file_load {
-    position: absolute;
-    left: 250px;
-    bottom: 37px;
-    border: 0;
-}
-
 #load {
     position: absolute;
     width: 80px;

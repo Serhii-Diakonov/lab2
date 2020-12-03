@@ -35,26 +35,25 @@
                 <th>Last name</th>
                 <th>Email</th>
                 <th>Role</th> 
+                <th>Photo</th>
             </tr>
             <?php
             require_once 'connection.php';
-            $res = mysqli_query ($conn, "SELECT * FROM users u JOIN roles r ON r.id=u.role_id");
+            $query="SELECT u.id, u.first_name, u.last_name, u.email, r.title AS role, u.photo
+            FROM users u 
+            JOIN roles r ON u.role_id=r.id";
+            $res = $conn->query($query);
+            // print_r($_SESSION);
             if($res){
-                $rows=mysqli_num_rows($res);
-                for ($i = 0 ; $i < $rows ; ++$i){
-                    $row = mysqli_fetch_row($res);
-                    if(is_array($row)){
-                        echo "<tr>";
+                while($row =$res->fetch_row()){   
+                    echo "<tr>";
                         echo "<td class='redirect' onclick='send(".$row[0].",\"personal.php\")'>".$row[0]."</td>";
-                        for($i=1; $i<3; $i++ ){
+                        for($i=1; $i<5; $i++ ){
                             echo "<td>".$row[$i]."</td>";
                         }
-                        echo "
-                        <td>".$row[6]."</td>
-                        <td>".$row[8]."</td>
-                        ";
+                        if($row[5]!=NULL)echo "<td><img src='".$row[5]."' alt='User`s avatar' class='ava'></td>";
+                        else echo "<td>No photo</td>";
                         echo "</tr>";
-                    } 
                 }
             } else echo "<tr>Impossible to get data from database</tr>";
             if($_SESSION['role']=="Admin") echo "<a href='registration.php'><button class='button' id='add_b'>Add user</button></a>";

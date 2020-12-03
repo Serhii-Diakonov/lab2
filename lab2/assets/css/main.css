@@ -20,8 +20,14 @@ h1 {
 }
 
 #add_b {
-    height: 50px;
+    width: 180px;
+    height: 70px;
     position: relative;
-    left: 1400px;
-    bottom: -500px;
+    left: 80px;
+    bottom: -150px;
+}
+
+.ava {
+    width: 100px;
+    height: 100px;
 }

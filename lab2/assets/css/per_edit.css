@@ -10,29 +10,36 @@ select {
 }
 
 #show {
-    position: relative;
+    position: absolute;
     left: 270px;
-    bottom: -550px;
+    bottom: -565px;
 }
 
 #load {
-    position: relative;
-    left: 570px;
-    bottom: -109px;
-    width: 200px;
-}
-
-#file_load {
     position: absolute;
-    bottom: -60px;
-    left: 1180px;
+    left: 570px;
+    bottom: -249px;
+    width: 200px;
 }
 
 #noimg {
     color: red;
-    width: 100px;
+    width: 200px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    position: relative;
-    left: 900px;
-    top: 150px;
+    position: absolute;
+    left: 1100px;
+    top: 250px;
+}
+
+#file_load {
+    position: absolute;
+    left: 1178px;
+    bottom: -250px;
+    border: 0;
+}
+
+#load1 {
+    position: absolute;
+    top: 515px;
+    left: 570px
 }

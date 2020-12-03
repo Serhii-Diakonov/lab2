@@ -6,16 +6,24 @@
 <html>
 <body>
 <?php
+
+function check_input($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+  }
+    $email="'".check_input($_POST['email'])."'";
+    $f_name="'".check_input($_POST['firstname'])."'";
+    $l_name="'".check_input($_POST['lastname'])."'";
+    $psw="'".check_input($_POST['password'])."'";
+    $role="'".$_POST['role']."'";
+
     require_once 'connection.php';
-    $check_query="SELECT email FROM users WHERE email='".$_POST['email']."'";
+    $check_query="SELECT email FROM users WHERE email='".$email."'";
     $res=mysqli_query ($conn, $check_query);
     $x=mysqli_fetch_array($res);
     if(!$x){
-        $email="'".$_POST['email']."'";
-        $f_name="'".$_POST['firstname']."'";
-        $l_name="'".$_POST['lastname']."'";
-        $psw="'".$_POST['password']."'";
-        $role="'".$_POST['role']."'";
         $query="INSERT INTO users (first_name, last_name, password, role_id, email) VALUES
          ($f_name, $l_name, $psw, $role, $email)";
         $res1=mysqli_query($conn, $query);

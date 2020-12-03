@@ -1,12 +1,21 @@
 <?php
 
-    require_once 'connection.php';
+function check_input($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+  }
+
+  $email=check_input($_POST['text']);
+  $psw=check_input($_POST['password']);
+  require_once 'connection.php';
     session_start();
     if (count($_POST)>0) {
         $query= "SELECT u.id, u.first_name, u.last_name, u.email, u.photo, r.title AS role 
         FROM users u
         JOIN roles r ON u.role_id=r.id 
-        WHERE email='".$_POST['text']."' AND password='".$_POST['password']."'";
+        WHERE email='".$email."' AND password='".$psw."'";
         $res = mysqli_query ($conn, $query);
         $row = mysqli_fetch_array($res);
         if (is_array($row)){
